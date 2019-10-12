@@ -18,11 +18,17 @@ class CuboidMaker2 {
 }
 
 class CubeMaker extends CuboidMaker2 {
-    
+    cubeVol() {return Math.pow(this.length, 3)}
+    cubeSurf() {return 6 * (Math.pow(this.length, 2))}
 }
 
 const cuboid2 = new CuboidMaker2 (4,5,5);
 
+const cubert = new CubeMaker (2,2,2);
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid2.volume()); // 100
 console.log(cuboid2.surfaceArea()); // 130
+
+console.log(cubert.cubeVol());
+console.log(cubert.cubeSurf());
